@@ -6,14 +6,12 @@ import {
 
 export class PrismaFeedbacksRepository implements FeedbacksRepository {
   async create({ comment, type, screenshot }: FeedbackCreateData) {
-    const feedback = await prisma.feedback.create({
+    await prisma.feedback.create({
       data: {
         comment,
         screenshot,
         type,
       },
     });
-
-    return feedback;
   }
 }
