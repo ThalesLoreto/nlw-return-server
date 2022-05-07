@@ -9,7 +9,7 @@ export class PrismaFeedbacksRepository implements FeedbacksRepository {
     await prisma.feedback.create({
       data: {
         comment,
-        screenshot,
+        screenshot: `${screenshot}`,
         type,
       },
     });
