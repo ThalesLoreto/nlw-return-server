@@ -4,6 +4,7 @@
 tmp/
 node_modules/
 .env
+coverage/
 
 *.tern-port
 node_modules/
